@@ -17,7 +17,7 @@ class ticketController extends Controller
         Product::create($request->all());
         return redirect()->route('productos.index')->with(
             'success',
-            'Ticket guardado'
+            'Incidencia registrada correctamente',
         );
     }
 }
