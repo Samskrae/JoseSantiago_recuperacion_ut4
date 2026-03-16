@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 
 class ticketController extends Controller
 {
+
+    // Store e Index
     public function index()
     {
         $productos = Product::all();

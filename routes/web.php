@@ -16,6 +16,7 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 
+    // get y post de productos para poder verlos y modificarlos
     Route::get('/tickets', [ticketController::class, 'index'])->name('productos.index');
     Route::post('/tickets', [ticketController::class, 'store'])->name('productos.store');
 });

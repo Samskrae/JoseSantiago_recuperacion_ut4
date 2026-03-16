@@ -10,6 +10,7 @@ return new class extends Migration {
      */
     public function up(): void
     {
+        // Como se forma la tabla
         Schema::create('products', function (Blueprint $table) {
             $table->id();
             $table->string('titulo');
