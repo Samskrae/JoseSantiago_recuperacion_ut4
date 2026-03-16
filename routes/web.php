@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ticketController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -14,4 +15,7 @@ Route::middleware([
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');
+
+    Route::get('/tickets', [ticketController::class, 'index'])->name('productos.index');
+    Route::post('/tickets', [ticketController::class, 'store'])->name('productos.store');
 });
